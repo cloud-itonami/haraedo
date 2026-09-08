@@ -4,7 +4,7 @@
   as infra). Runs the pure route helpers + the node functions (datalog host binding stubbed via the
   *datalog* dynamic var, the cljc equivalent of the Python module-global swap) + seed-EDN gate checks."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.java.io :as io]
             [haraedo.methods.agent :as agent]))
 

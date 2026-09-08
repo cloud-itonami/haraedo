@@ -8,7 +8,7 @@
   test swaps); when nil the nodes degrade exactly like local-dev. OMITTED legs: build_intake_graph/
   build_dispatch_graph/handle_* (the langgraph framework wiring) and fetch_facilities (urllib live-
   fetch CLI, kept as infra)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [cheshire.core :as json])))
 
 ;; ── kotoba datalog host binding (injected; nil in local dev / cljc default) ───
@@ -210,7 +210,7 @@
 (defn sticker-node [state]
   (if-not (seq (get state "consent_sig"))
     {"sticker_id" ""}
-    (let [juris (str/upper-case (subs (last (str/split (get state "jurisdiction") #"\.")) 0 (min 3 (count (last (str/split (get state "jurisdiction") #"\."))))))
+    (let [juris (str/upper (subs (last (str/split (get state "jurisdiction") #"\.")) 0 (min 3 (count (last (str/split (get state "jurisdiction") #"\."))))))
           date (str/replace (or (get state "scheduled_date") "") "-" "")
           sticker (str juris "-" date "-" (format "%05d" (mod (Math/abs (hash (get state "member_did"))) 100000)))]
       (when *datalog*
