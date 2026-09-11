@@ -5,5 +5,5 @@
   :repository/west-path "orgs/etzhayyim/com-etzhayyim-haraedo"
   :repository/legacy-path "20-actors/haraedo"
   :repository/runtime :babashka
-  :repository/test-command "bb test"
+  :repository/test-command "kbb -M:test"
   :repository/external-dependencies [:babashka/cheshire]}]
