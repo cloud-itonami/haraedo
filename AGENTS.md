@@ -1,4 +1,4 @@
-# haraedo 祓戸 — CLAUDE.md
+# haraedo 祓戸 — AGENTS.md
 
 Global **bulky-waste (粗大ゴミ) disposal** actor — two-sided: **citizen intake**
 (classify / quote / schedule / sticker) + **operator logistics** (受付 / 配車 /
