@@ -2,7 +2,7 @@
 
 Global **bulky-waste (粗大ゴミ) disposal** actor — citizen intake + operator
 logistics (受付 / 配車 / ルート / 担当者) + worldwide processing-facility registry.
-See `CLAUDE.md` for role, gates, and boundary; ADR-2606010200 for the full
+See `AGENTS.md` for role, gates, and boundary; ADR-2606010200 for the full
 decision record.
 
 ## Quickstart
